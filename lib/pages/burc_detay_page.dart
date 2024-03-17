@@ -30,7 +30,9 @@ class _IcerikState extends State<_Icerik> {
   @override
   void initState() {
     super.initState();
-    loadRenk();
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => loadRenk(),
+    );
   }
 
   @override
