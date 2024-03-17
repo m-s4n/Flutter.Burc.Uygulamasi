@@ -1,4 +1,3 @@
-import 'package:app_burc/pages/burc_detay_page.dart';
 import 'package:flutter/material.dart';
 import 'package:app_burc/models/burc.dart';
 
@@ -31,11 +30,11 @@ class BurcItem extends StatelessWidget {
             color: Colors.pink,
           ),
           onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => BurcDetayPage(burc: burc),
-                ));
+            Navigator.pushNamed(
+              context,
+              'burc-detay',
+              arguments: burc,
+            );
           },
         ),
       ),
